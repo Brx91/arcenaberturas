@@ -133,6 +133,13 @@ header {
     outline: none;
 }
 
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary);
+    color: var(--white);
+}
+
 /* --- HERO SECTION --- */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
