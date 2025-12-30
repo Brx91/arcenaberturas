@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcen Aberturas | Aluminio & PVC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#inicio">
+        <picture>
+            <source media="(max-width: 768px)" srcset="images/favi.png">
+            <img class="logo-img" src="images/logo.png" alt="Arcen Aberturas">
+        </picture>
+    </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sistemas">Sistemas</a></li>
+                <li><a href="#galeria">Trabajos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Aberturas de Alta Prestación</h1>
+            <p>Especialistas en sistemas Modena, A30 y A40 con tecnología RPT.</p>
+            <div class="hero-btns">
+                <a href="#contacto" class="btn-main">Pedir Presupuesto</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sistemas" class="container">
+        <h2 class="section-title">Modelos de Carpintería</h2>
+        <div class="grid">
+            <div class="model-card">
+                <div class="model-header">Modena</div>
+                <div class="model-tag tag-frio">Línea Fría</div>
+                <p>Equilibrio perfecto entre costo y durabilidad.</p>
+            </div>
+            <div class="model-card highlight">
+                <div class="model-header">Modena RPT</div>
+                <div class="model-tag tag-rpt">Térmico</div>
+                <p>Máximo ahorro energético y sin condensación.</p>
+            </div>
+            <div class="model-card">
+                <div class="model-header">Línea A30</div>
+                <div class="model-tag tag-frio">Robusta</div>
+                <p>Para ventanales de gran porte y alta resistencia.</p>
+            </div>
+            <div class="model-card premium">
+                <div class="model-header">Línea A40 RPT</div>
+                <div class="model-tag tag-rpt">Premium</div>
+                <p>Diseño minimalista y hermeticidad absoluta.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Trabajos Realizados</h2>
+            <div class="gallery-grid" id="gallery">
+                <div class="gallery-item"><img src="images/img3.jpg" alt="Obra 1"></div>
+                <div class="gallery-item"><img src="images/img19.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img5.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img6.jpg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img16.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img34.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img39.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img40.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img43.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img44.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img46.jpeg" alt="Obra 2"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <section id="contacto" class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-wrapper">
+            <form id="contact-form" action="https://formspree.io/f/TU_CODIGO" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Detalle de la consulta..." rows="4" required></textarea>
+                <button type="submit" class="btn-main" style="width: 100%;">Enviar Consulta</button>
+            </form>
+            <div class="social-box">
+                <h3>Vías Directas</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-btn wsp">WhatsApp</a>
+                    <a href="#" class="social-btn insta">Instagram</a>
+                    <a href="#" class="social-btn facebook">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5491100000000" class="wsp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
