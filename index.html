@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcen Aberturas | Aluminio & PVC</title>
+    
+    <title>Arcen Aberturas | Ventanas de Aluminio y PVC en Mar del Plata</title>
+    
+    <meta name="description" content="Fabricación a medida de aberturas de alta prestación en Mar del Plata. Líneas Modena, A30 y A40 con RPT. Ventanas, puertas y cerramientos de calidad premium.">
+    
+    <meta name="keywords" content="aberturas de aluminio, ventanas pvc mar del plata, linea modena, linea a30, aberturas rpt, cerramientos aluminio, carpinteria metalica"/>
+    <link rel="canonical" href="https://arcenaluminio.com.ar" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arcenaluminio.com.ar" />
+    <meta property="og:title" content="Arcen Aberturas | Alta Prestación en Aluminio y PVC" />
+    <meta property="og:description" content="Especialistas en carpintería de aluminio. Pedí tu presupuesto online para sistemas Modena, A30 y A40." />
+    <meta property="og:image" content="https://arcenaluminio.com.ar/images/og-image.jpg" />
+
+    <link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Arcen Aberturas",
+  "image": "https://arcenaluminio.com.ar/images/logo.png",
+  "description": "Carpintería de aluminio y PVC de alta prestación en Mar del Plata. Especialistas en líneas Modena y A30.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Italia 4191", 
+    "addressLocality": "Mar del Plata",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "7600",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -38.0055, 
+    "longitude": -57.5426
+  },
+  "url": "https://arcenaluminio.com.ar",
+  "telephone": "+5492236892376",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 
@@ -43,23 +98,28 @@
     <section id="sistemas" class="container">
         <h2 class="section-title">Modelos de Carpintería</h2>
         <div class="grid">
-            <div class="model-card">
+            <div class="model-card" onclick="openModal('modal-modena')">
                 <div class="model-header">Modena</div>
                 <div class="model-tag tag-frio">Línea Fría</div>
                 <p>Equilibrio perfecto entre costo y durabilidad.</p>
             </div>
-            <div class="model-card highlight">
+            <div class="model-card highlight" onclick="openModal('modal-modenarpt')">
                 <div class="model-header">Modena RPT</div>
                 <div class="model-tag tag-rpt">Térmico</div>
                 <p>Máximo ahorro energético y sin condensación.</p>
             </div>
-            <div class="model-card">
+            <div class="model-card" onclick="openModal('modal-a30')"">
                 <div class="model-header">Línea A30</div>
                 <div class="model-tag tag-frio">Robusta</div>
                 <p>Para ventanales de gran porte y alta resistencia.</p>
             </div>
-            <div class="model-card premium">
+            <div class="model-card premium" onclick="openModal('modal-a40')"">
                 <div class="model-header">Línea A40 RPT</div>
+                <div class="model-tag tag-rpt">Premium</div>
+                <p>Diseño minimalista y hermeticidad absoluta.</p>
+            </div>
+            <div class="model-card pvc" onclick="openModal('modal-pvc')"">
+                <div class="model-header">Línea Shuco PVC</div>
                 <div class="model-tag tag-rpt">Premium</div>
                 <p>Diseño minimalista y hermeticidad absoluta.</p>
             </div>
@@ -70,17 +130,17 @@
         <div class="container">
             <h2 class="section-title">Trabajos Realizados</h2>
             <div class="gallery-grid" id="gallery">
-                <div class="gallery-item"><img src="images/img3.jpg" alt="Obra 1"></div>
-                <div class="gallery-item"><img src="images/img19.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img5.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img6.jpg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img16.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img34.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img39.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img40.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img43.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img44.jpeg" alt="Obra 2"></div>
-                <div class="gallery-item"><img src="images/img46.jpeg" alt="Obra 2"></div>
+                <div class="gallery-item"><img src="images/img3.jpg" alt="Paño Fijo vidrio repartido"></div>
+                <div class="gallery-item"><img src="images/img19.jpeg" alt="Porton Herrero Blanco"></div>
+                <div class="gallery-item"><img src="images/img5.jpeg" alt="Obra Modena negro vidrio simple"></div>
+                <div class="gallery-item"><img src="images/img6.jpg" alt="Obra playa modena dvh blanco sistema compacto"></div>
+                <div class="gallery-item"><img src="images/img16.jpeg" alt="Frente Integral"></div>
+                <div class="gallery-item"><img src="images/img34.jpeg" alt="Pergola"></div>
+                <div class="gallery-item"><img src="images/img39.jpeg" alt="Edificio, barandas y a30"></div>
+                <div class="gallery-item"><img src="images/img40.jpeg" alt="Modena negro divisiones"></div>
+                <div class="gallery-item"><img src="images/img43.jpeg" alt="Obra cafe santa clara"></div>
+                <div class="gallery-item"><img src="images/img44.jpeg" alt="Obra deptos santa clara"></div>
+                <div class="gallery-item"><img src="images/img46.jpeg" alt="Obra caleta"></div>
             </div>
         </div>
     </section>
@@ -93,9 +153,15 @@
     <section id="contacto" class="container">
         <h2 class="section-title">Contacto</h2>
         <div class="contact-wrapper">
-            <form id="contact-form" action="https://formspree.io/f/TU_CODIGO" method="POST">
-                <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="email" name="email" placeholder="Email" required>
+            <form id="contact-form" action="https://formspree.io/f/HOLA" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <select name="interes" required>
+                    <option value="" disabled selected>Me interesa...</option>
+                    <option value="presupuesto">Presupuesto de Obra</option>
+                    <option value="consulta">Consulta Técnica</option>
+                    <option value="otros">Otros</option>
+                </select>
                 <textarea name="mensaje" placeholder="Detalle de la consulta..." rows="4" required></textarea>
                 <button type="submit" class="btn-main" style="width: 100%;">Enviar Consulta</button>
             </form>
@@ -114,7 +180,59 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer>Derechos reservados &copy; Arcen Aberturas</footer>
+    <footer> &copy; 2025 Arcen Aberturas. Todos los derechos reservados.
+
+    Diseñado con pasión en Mar del Plata.</footer>
+
+    <div id="modal-modena" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-modena')">&times;</span>
+            <h2>Línea Modena</h2>
+            <div class="modal-body">
+                <p>Contenido técnico de Modena...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-modenarpt" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-modenarpt')">&times;</span>
+            <h2>Línea Modena</h2>
+            <div class="modal-body">
+                <p>Contenido técnico de Modena...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-a30" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-a30')">&times;</span>
+            <h2>Línea Modena</h2>
+            <div class="modal-body">
+                <p>Contenido técnico de Modena...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-a40" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-a40')">&times;</span>
+            <h2>Línea A30</h2>
+            <div class="modal-body">
+                <p>Contenido técnico de A30...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pvc" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-pvc')">&times;</span>
+            <h2>Línea A30</h2>
+            <div class="modal-body">
+                <p>Contenido técnico de A30...</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
