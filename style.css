@@ -563,8 +563,8 @@ footer {
 /* La caja blanca central */
 .modal-content {
     background-color: #fff;
-    margin: 5% auto;
-    padding: 20px;
+    margin: 2% auto;
+    padding: 30px;
     border-radius: 12px;
     width: 95%;
     max-width: 900px;
@@ -619,15 +619,22 @@ footer {
     margin-right: 8px;
 }
 
+.modal-image-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 .modal-image-container img {
     width: 100%;
-    max-width: 100%;
     height: auto;
-    display: block;
+    max-height: 450px;
+    object-fit: cover;
     border-radius: 8px;
     margin: 15px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+
 
 @media (min-width: 768px) {
     .modal-body {
