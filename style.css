@@ -447,19 +447,34 @@ footer {
 .model-card:nth-child(3) { transition-delay: 0.4s; }
 .model-card:nth-child(4) { transition-delay: 0.6s; }
 
-/* Botón de eliminar en el panel de admin */
-.btn-delete {
-    background: none;
-    border: 1px solid #ff4444;
-    color: #ff4444;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-.btn-delete:hover {
-    background: #ff4444;
+/* Etiqueta para Modena RPT */
+.tag-rpt {
+    background-color: #27ae60; /* Verde eficiencia */
     color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Etiqueta y estilo para PVC Schüco */
+.tag-pvc {
+    background-color: #e67e22; /* Naranja tecnológico */
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.pvc-card {
+    border: 2px solid #e67e22 !important; /* Resalta sobre las demás */
+}
+
+.pvc-card:hover {
+    box-shadow: 0 15px 30px rgba(230, 126, 34, 0.2) !important;
 }
 
 /* --- WHATSAPP FLOTANTE --- */
@@ -519,24 +534,8 @@ footer {
     }
 }
 
-/* Estilos Tabs */
-.admin-tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-.tab-btn { background: none; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; color: #666; }
-.tab-btn.active { color: var(--accent); border-bottom: 3px solid var(--accent); }
-
-/* Cotizador Tabla */
-#tabla-cotizacion { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
-#tabla-cotizacion th { background: #f4f4f4; padding: 10px; text-align: left; }
-#tabla-cotizacion td { padding: 10px; border-bottom: 1px solid #eee; }
-
-.cotizador-form { display: grid; grid-template-columns: 2fr 1fr auto; gap: 10px; margin-bottom: 20px; }
-.total-area { margin-top: 20px; padding: 15px; background: #e9f7ef; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
-#total-general { font-size: 1.5rem; color: var(--success); }
-
 @media (max-width: 600px) {
-    .cotizador-form { grid-template-columns: 1fr; }
-}
-
+    
 .reveal-hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -545,6 +544,7 @@ footer {
 .reveal-visible {
     opacity: 1;
     transform: translateY(0);
+}
 }
 
 /* El fondo del modal */
@@ -563,13 +563,17 @@ footer {
 /* La caja blanca central */
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
-    padding: 25px;
+    margin: 2% auto;
+    padding: 30px;
     border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
+    width: 95%;
+    max-width: 900px;
     position: relative;
     animation: slideIn 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+    color: #333;
+   
 }
 
 @keyframes slideIn {
@@ -590,3 +594,73 @@ footer {
 
 .modal-body p { margin: 15px 0; color: #333; }
 .modal-body ul { padding-left: 20px; margin-bottom: 20px; }
+
+
+
+.modal-body h4 {
+    margin-top: 15px;
+    color: var(--primary); 
+}
+
+.tipologias-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.tipologias-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.tipologias-list li i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+    .modal-body {
+        display: flex;       
+        gap: 30px;         
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .modal-image-container {
+        flex: 1;            
+        margin-bottom: 0;    
+    }
+
+    .modal-info-text {
+        flex: 1.2;           
+    }
+}
+/* Estilo de la lista para que no ocupe tanto espacio vertical */
+.tipologias-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr; /* En celu una columna, en PC podemos poner 2 */
+}
+
+@media (min-width: 600px) {
+    .tipologias-list {
+        grid-template-columns: 1fr 1fr; /* Lista en dos columnas para ahorrar espacio */
+        gap: 5px 15px;
+    }
+}
+
+.tipologias-list li {
+    font-size: 0.9rem;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
